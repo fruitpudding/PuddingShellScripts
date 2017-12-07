@@ -2,7 +2,7 @@
 
 ssh "$@"
 shopt -s nocasematch
-if [ $? -ne 1 ]; then
+if [ $? -ne 0 ]; then
     read -p "Failed to login. Do you want to restart gpg-agent? [y/N]" usrinput
     if [ "$usrinput" == "y" ]; then
         source /Users/pudding/scripts/restart_gpgagent.sh
