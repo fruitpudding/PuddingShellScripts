@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh $1
+ssh "$@"
 shopt -s nocasematch
 if [ $? -ne 1 ]; then
     read -p "Failed to login. Do you want to restart gpg-agent? [y/N]" usrinput
